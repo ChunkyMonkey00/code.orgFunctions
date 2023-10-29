@@ -40,11 +40,11 @@ onEvent("btn", "click", function () {
   console.log(getValue(obj, "key"));
   addPair(obj, "key2", 1234);
   console.log(obj);
+  setScreen("game.html");
+  setScreen("https://google.com");
 });
 
 /*Theoretically (but not tested) possible functions
-setScreen("game.html");
-setScreen("https://google.com");
 playAudio("your_audio.mp3");
 stopAudio("your_audio.mp3");
 */
