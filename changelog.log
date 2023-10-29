@@ -6,3 +6,4 @@ v1.0.0 - added canvas support, library should now be fully functional and availa
 v1.0.1 - renamed variables with traditional library naming convention (_varName)
 v1.0.2 - minor bug fixes
 v1.0.3 - play and stop audio functions updated (still in wip phase)
+v1.0.4 - change file titles, to add support for game lab functions (this will be a hell)
