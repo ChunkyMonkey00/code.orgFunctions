@@ -6,7 +6,7 @@ code.org functions in pure js, this is a library for teachers/students who want 
 
 #Usage
 to use in your program, put the following line in the `<head>` element of your HTML  
-`<script src="https://cdn.jsdelivr.net/gh/ChunkyMonkey00/code.orgFunctions@main/lib.js"></script>`  
+`<script src="https://cdn.jsdelivr.net/gh/ChunkyMonkey00/code.orgFunctions@main/functionLibrary.js"></script>`  
 
 and make sure you put in  
 ```
@@ -24,7 +24,7 @@ calling functions from this lib requires a prefix (labs) EX:
 <!DOCTYPE HTML>
 <html>
   <head>
-    <script src="https://cdn.jsdelivr.net/gh/ChunkyMonkey00/code.orgFunctions@main/lib.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/ChunkyMonkey00/code.orgFunctions@main/functionLibrary.js"></script>
   </head>
   <body>
       <button id="btn1">Click Me!</button>
