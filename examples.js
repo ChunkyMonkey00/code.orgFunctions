@@ -43,7 +43,7 @@ onEvent("btn", "click", function () {
     setScreen("game.html");
     setScreen("https://google.com");
     createCanvas('canv', 200, 150);
-    setProperty('canv', "border", "2px dashed blue");
+    setProperty('canv', "style.border", "2px dashed blue");
     setActiveCanvas('canv');
     setFillColor("green");
     circle(100, 75, 50);
