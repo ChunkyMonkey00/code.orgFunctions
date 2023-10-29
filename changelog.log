@@ -8,3 +8,4 @@ v1.0.2 - minor bug fixes
 v1.0.3 - play and stop audio functions updated (still in wip phase)
 v1.0.4 - change file titles, to add support for game lab functions (this will be a hell)
 v1.0.5 - change more file names, functions are now initialized as appLab.(functionName).
+v1.1.0 - technically game lab support is in, just not enough of it for this to be v2. Also everything is now just "labs.function" instead of having seperate appLab and gameLab functions.
