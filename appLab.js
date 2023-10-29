@@ -256,6 +256,11 @@ var appLab = (function () {
     ctx = c.getContext('2d');
   }
 
+  // Set the active canvas
+  function getActiveCanvas() {
+    return c;
+  }
+
   // Draw a line on the canvas
   function line(x1, y1, x2, y2) {
     ctx.beginPath();
@@ -444,6 +449,7 @@ var appLab = (function () {
     createImage: createImage,
     createCanvas: createCanvas,
     setActiveCanvas: setActiveCanvas,
+    getActiveCanvas: getActiveCanvas,
     line: line,
     setFillColor: setFillColor,
     circle: circle,
