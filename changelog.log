@@ -7,3 +7,4 @@ v1.0.1 - renamed variables with traditional library naming convention (_varName)
 v1.0.2 - minor bug fixes
 v1.0.3 - play and stop audio functions updated (still in wip phase)
 v1.0.4 - change file titles, to add support for game lab functions (this will be a hell)
+v1.0.5 - change more file names, functions are now initialized as appLab.(functionName).
