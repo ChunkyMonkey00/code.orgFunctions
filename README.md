@@ -3,6 +3,8 @@ code.org functions in pure js, this is a library for teachers/students who want 
 
 # Usage
 to use in your program, put the following line in the `<head>` element of your HTML  
+`<script src="https://cdn.jsdelivr.net/gh/ChunkyMonkey00/code.orgFunctions@main/functions.js"></script>`  
+
 and make sure you put in  
 ```
 document.addEventListener("DOMContentLoaded", function() {
@@ -11,7 +13,6 @@ document.addEventListener("DOMContentLoaded", function() {
 ```
 to ensure that the javascript library can load before you call any of its functions.
   
-`<script src="https://cdn.jsdelivr.net/gh/ChunkyMonkey00/code.orgFunctions@main/functions.js"></script>`  
 
   EX: 
 ```
