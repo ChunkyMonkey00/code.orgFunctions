@@ -237,13 +237,47 @@ function createImage(src) {
   return img;
 }
 
+//variable functions
+function promptNum() {
+var answer = prompt("Enter a number:");
+while (!/^[0-9]+$/.test(answer)) {
+  answer = prompt("Enter a number: ");
+}
+return answer;
+}
+
+function insertItem(list, index, item) {
+  if(isNaN(index)) {
+    throw new Error("Only use numbers for index insertItem.");
+    return;
+  }
+  console.log(item, index);
+  list.splice(index, 0, item);
+}
+
+function appendItem(list, item) {
+  list.push(item);
+}
+
+function removeItem(list, index) {
+  list.splice(index, 1);
+}
+
+function getValue(object, key) {
+  return object[key];
+}
+
+function addPair(object, key, value) {
+  object[key]=value;
+}
+
 //Math
 //Math functions
 function randomNumber(min, max) {
   return Math.round(Math.random() * (max - min) + min);
 }
 
-/*Use of each function for examples
+/* Usage of each function
 onEvent("btn", "click", function () {
   console.log(getProperty("btn", "text"));
   console.log(getText("label1"));
@@ -272,11 +306,24 @@ onEvent("btn", "click", function () {
   createCheckbox();
   createRadioButton();
   createImage("image.jpg");
+  console.log(promptNum());
+  var array = [1, 2, 3];
+  insertItem(array, 1, "Hi");
+  console.log(array);
+  appendItem(array, "hi2");
+  console.log(array);
+  removeItem(array, 1);
+  console.log(array);
+  var obj = {"key":123};
+  console.log(getValue(obj, "key"));
+  addPair(obj, "key2", 1234);
+  console.log(obj);
 });
 */
-  /*Theoretically (but not tested) possible functions
-  setScreen("game.html");
-  setScreen("https://google.com");
-  playAudio("your_audio.mp3");
-  stopAudio("your_audio.mp3");
-  */
+
+/*Theoretically (but not tested) possible functions
+setScreen("game.html");
+setScreen("https://google.com");
+playAudio("your_audio.mp3");
+stopAudio("your_audio.mp3");
+*/
