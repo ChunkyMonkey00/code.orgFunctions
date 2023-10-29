@@ -1,3 +1,6 @@
+# Notice
+Not all function names/uses are exactly the same, please look at examples.js to see what changed  
+  
 # code.org Functions in pure Javascript
 code.org functions in pure js, this is a library for teachers/students who want to transition from code.org to pure javascript.
 
