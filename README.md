@@ -33,4 +33,4 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 ```  
 visit examples.html for an example of how to set up usage of these functions (in HTML)  
-visit functions.js (the last 2 comments at the bottom of the file) for example usage.
+visit examples.js for an example of how to use each function. (in javascript)
