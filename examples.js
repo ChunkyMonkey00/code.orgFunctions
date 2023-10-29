@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
 
+//App lab
 onEvent("btn", "click", function () {
     console.log(getProperty("btn", "text"));
     console.log(getText("label1"));
@@ -71,4 +72,5 @@ onEvent("btn", "click", function () {
     //Only probelem^^ you cant play one audio more than once at a time :( no spamming
 });
 
+    //Game lab
 });
