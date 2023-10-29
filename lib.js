@@ -182,65 +182,73 @@ var labs = (function () {
   }
 
   //Finally, create elements sections. I may have cheated on these one :(
-  function createButton(text) {
-    var button = document.createElement("button");
-    button.textContent = text;
-    setElementPosition(button, 0, 0);
-    document.body.appendChild(button);
-    return button;
-  }
+  function createButton(id, text) {
+  var button = document.createElement("button");
+  button.id = id;
+  button.textContent = text;
+  setElementPosition(button, 0, 0);
+  document.body.appendChild(button);
+  return button;
+}
 
-  function createTextInput() {
-    var input = document.createElement("input");
-    input.type = "text";
-    setElementPosition(input, 0, 0);
-    document.body.appendChild(input);
-    return input;
-  }
+function createTextInput(id) {
+  var input = document.createElement("input");
+  input.id = id;
+  input.type = "text";
+  setElementPosition(input, 0, 0);
+  document.body.appendChild(input);
+  return input;
+}
 
-  function createTextLabel(text) {
-    var label = document.createElement("label");
-    label.textContent = text;
-    setElementPosition(label, 0, 0);
-    document.body.appendChild(label);
-    return label;
-  }
+function createTextLabel(id, text) {
+  var label = document.createElement("label");
+  label.id = id;
+  label.textContent = text;
+  setElementPosition(label, 0, 0);
+  document.body.appendChild(label);
+  return label;
+}
 
-  function createDropdown(options) {
-    var select = document.createElement("select");
-    options.forEach(function (optionText) {
-      var option = document.createElement("option");
-      option.textContent = optionText;
-      select.appendChild(option);
-    });
-    setElementPosition(select, 0, 0);
-    document.body.appendChild(select);
-    return select;
-  }
+function createDropdown(id, options) {
+  var select = document.createElement("select");
+  select.id = id;
+  options.forEach(function (optionText) {
+    var option = document.createElement("option");
+    option.textContent = optionText;
+    select.appendChild(option);
+  });
+  setElementPosition(select, 0, 0);
+  document.body.appendChild(select);
+  return select;
+}
 
-  function createCheckbox() {
-    var checkbox = document.createElement("input");
-    checkbox.type = "checkbox";
-    setElementPosition(checkbox, 0, 0);
-    document.body.appendChild(checkbox);
-    return checkbox;
-  }
+function createCheckbox(id) {
+  var checkbox = document.createElement("input");
+  checkbox.id = id;
+  checkbox.type = "checkbox";
+  setElementPosition(checkbox, 0, 0);
+  document.body.appendChild(checkbox);
+  return checkbox;
+}
 
-  function createRadioButton() {
-    var radio = document.createElement("input");
-    radio.type = "radio";
-    setElementPosition(radio, 0, 0);
-    document.body.appendChild(radio);
-    return radio;
-  }
+function createRadioButton(id) {
+  var radio = document.createElement("input");
+  radio.id = id;
+  radio.type = "radio";
+  setElementPosition(radio, 0, 0);
+  document.body.appendChild(radio);
+  return radio;
+}
 
-  function createImage(src) {
-    var img = document.createElement("img");
-    img.src = src;
-    setElementPosition(img, 0, 0);
-    document.body.appendChild(img);
-    return img;
-  }
+function createImage(id, src) {
+  var img = document.createElement("img");
+  img.id = id;
+  img.src = src;
+  setElementPosition(img, 0, 0);
+  document.body.appendChild(img);
+  return img;
+}
+
 
   // Canvas functions
   // These functions work with the HTML5 canvas element.
