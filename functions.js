@@ -237,17 +237,147 @@ function createImage(src) {
   return img;
 }
 
+// Canvas functions
+// These functions work with the HTML5 canvas element.
+
+// Create a canvas element
+function createCanvas(id, width, height) {
+  var canvas = document.createElement("canvas");
+  canvas.id = id || "";
+  canvas.width = width || 100;
+  canvas.height = height || 100;
+  setElementPosition(canvas, 0, 0);
+  document.body.appendChild(canvas);
+  return canvas;
+}
+
+// Set the active canvas
+function setActiveCanvas(id) {
+  c = getElem(id);
+  ctx = c.getContext('2d');
+}
+
+// Draw a line on the canvas
+function line(x1, y1, x2, y2) {
+  ctx.beginPath();
+  ctx.moveTo(x1, y1);
+  ctx.lineTo(x2, y2);
+  ctx.stroke();
+}
+
+// Set the fill color for canvas drawing
+function setFillColor(color) {
+  ctx.fillStyle = color;
+}
+
+// Draw a filled circle on the canvas
+function circle(x, y, radius) {
+  ctx.beginPath();
+  ctx.arc(x, y, radius, 0, 2 * Math.PI);
+  ctx.fill();
+  ctx.closePath();
+}
+
+// Draw a filled rectangle on the canvas
+function rect(x, y, width, height) {
+  ctx.fillRect(x, y, width, height);
+}
+
+// Set the stroke width for canvas drawing
+function setStrokeWidth(width) {
+  ctx.lineWidth = width;
+}
+
+// Set the stroke color for canvas drawing
+function setStrokeColor(color) {
+  ctx.strokeStyle = color;
+}
+
+// Draw an image on the canvas from a URL
+function drawImageURL(url) {
+  var img = new Image();
+  img.src = url;
+  img.onload = function () {
+    ctx.drawImage(img, 0, 0);
+  };
+}
+
+// Clear the canvas
+function clearCanvas() {
+  ctx.clearRect(0, 0, c.width, c.height);
+}
+
+// Get image data
+function getImageDataAt(x, y, width, height) {
+  return ctx.getImageData(x, y, width, height);
+}
+
+// Put image data
+function putImageDataAt(imgData, x, y) {
+  ctx.putImageData(imgData, x, y);
+}
+
+// Get the red component of a pixel
+function getRed(imgData, x, y) {
+  var index = (y * imgData.width + x) * 4;
+  return imgData.data[index];
+}
+
+// Get the green component of a pixel
+function getGreen(imgData, x, y) {
+  var index = (y * imgData.width + x) * 4 + 1;
+  return imgData.data[index];
+}
+
+// Get the blue component of a pixel
+function getBlue(imgData, x, y) {
+  var index = (y * imgData.width + x) * 4 + 2;
+  return imgData.data[index];
+}
+
+// Set the red component of a pixel
+function setRed(imgData, x, y, value) {
+  var index = (y * imgData.width + x) * 4;
+  imgData.data[index] = value;
+}
+
+// Set the green component of a pixel
+function setGreen(imgData, x, y, value) {
+  var index = (y * imgData.width + x) * 4 + 1;
+  imgData.data[index] = value;
+}
+
+// Set the blue component of a pixel
+function setBlue(imgData, x, y, value) {
+  var index = (y * imgData.width + x) * 4 + 2;
+  imgData.data[index] = value;
+}
+
+// Set the alpha component of a pixel
+function setAlpha(imgData, x, y, value) {
+  var index = (y * imgData.width + x) * 4 + 3;
+  imgData.data[index] = value;
+}
+
+// Set the RGB components of a pixel
+function setRGB(imgData, x, y, red, green, blue) {
+  var index = (y * imgData.width + x) * 4;
+  imgData.data[index] = red;
+  imgData.data[index + 1] = green;
+  imgData.data[index + 2] = blue;
+}
+
 //variable functions
 function promptNum() {
-var answer = prompt("Enter a number:");
-while (!/^[0-9]+$/.test(answer)) {
-  answer = prompt("Enter a number: ");
-}
-return answer;
+  var answer = prompt("Enter a number:");
+  while (!/^[0-9]+$/.test(answer)) {
+    answer = prompt("Enter a number: ");
+  }
+  return answer;
 }
 
 function insertItem(list, index, item) {
-  if(isNaN(index)) {
+  if (isNaN(index)) {
     throw new Error("Only use numbers for index insertItem.");
     return;
   }
@@ -268,7 +398,7 @@ function getValue(object, key) {
 }
 
 function addPair(object, key, value) {
-  object[key]=value;
+  object[key] = value;
 }
 
 //Math
