@@ -65,11 +65,10 @@ onEvent("btn", "click", function () {
     setGreen(pixelData, 0, 0, 64);
     setBlue(pixelData, 0, 0, 192);
     putImageDataAt(pixelData, 0, 0);
+    //WARNING: SOMEWHAT WORKING ZONE:
+    playAudio("your_audio.mp3");
+    stopAudio("your_audio.mp3");
+    //Only probelem^^ you cant play one audio more than once at a time :( no spamming
 });
-
-/*Theoretically (but not tested) possible functions
-playAudio("your_audio.mp3");
-stopAudio("your_audio.mp3");
-*/
 
 });
