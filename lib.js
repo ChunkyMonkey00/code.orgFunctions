@@ -8,8 +8,8 @@ Anyways ENJOY!
 */
 
 //Variable set-up
-var audio;
-var audioElements = {};
+var _audio;
+var _audioElements = {};
 
 //Setup functions (not in code.org, but i use them to make this library)
 function getElem(id) {
@@ -104,21 +104,22 @@ function setImageURL(element, val) {
 
 function makeAudio(audioSrc) {
   const audio = new Audio(audioSrc);
-  audioElements[audioSrc] = audio;
+  _audioElements[audioSrc] = audio;
   audio.play();
   return audio;
 }
 
 function playAudio(src) {
-  if (audioElements[src]) {
-    audioElements[src].play();
+  var audioElement;
+  if (_audioElements[src]) {
+    _audioElements[src].play();
   } else {
     audioElement = makeAudio(src);
   }
 }
 
 function stopAudio(audioSrc) {
-  const audioElement = audioElements[audioSrc];
+  const audioElement = _audioElements[audioSrc];
   if (audioElement && !audioElement.paused) {
     audioElement.pause();
     audioElement.currentTime = 0;
