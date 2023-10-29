@@ -7,7 +7,8 @@ to use in your program, put the following line in the `<head>` element of your H
 `<script src="https://cdn.jsdelivr.net/gh/ChunkyMonkey00/code.orgFunctions@main/functions.js"></script>`  
 
   EX: 
-```<!DOCTYPE HTML>
+```
+<!DOCTYPE HTML>
 <html>
   <head>
     <script src="https://cdn.jsdelivr.net/gh/ChunkyMonkey00/code.orgFunctions@main/functions.js"></script>
