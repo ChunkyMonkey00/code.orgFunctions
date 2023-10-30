@@ -39,6 +39,9 @@ body {
   background: url('your-logo-image.png') no-repeat center center;
   background-size: cover;
   margin: 0 10px;
+  border: 1px solid white;
+  border-bottom: none;
+  border-top: none;
   /* Add spacing between the logo and other items */
 }
 
