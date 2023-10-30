@@ -116,5 +116,5 @@ p {
         }
 
         .bubble.active {
-            background-color: lightgray;
+            background-color: darkgray;
         }
