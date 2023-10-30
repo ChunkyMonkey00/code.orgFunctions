@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Home</title>
+	<link href=https://fonts.cdnfonts.com/css/open-dyslexic rel="stylesheet">
+	<link href="doc-styles.css" rel="stylesheet" />
+</head>
+
+<body>
+	<div class="top-nav">
+		<div class="nav-item logo">
+			<img src="logo.png" width="50px" height="50px" style="border: 1px solid white;border-top:none;border-bottom:none;background-color:white;" /></div>
+			<div class="nav-item"><a href="index.html">Home</a></div>
+			<div class="nav-item"><a href="dpc-index.html">Documents</a></div>
+			<div class="nav-item">Contact</div>
+		</div>
+		<div class="side-nav" id="mySidenav">
+			<button id="closeBtn" onclick="closeNav()">Close</button>
+			<div class="nav-section" onclick="showContent(1)">onEvent(elem, event, func)</div>
+			<div class="nav-section" onclick="showContent(2)">setProperty(elem, prop, val)</div>
+			<div class="nav-section" onclick="showContent(3)">getProperty(element, property)</div>
+			<div class="nav-section" onclick="showContent(4)">getText(element)</div>
+			<div class="nav-section" onclick="showContent(5)">setText(element, val)</div>
+			<div class="nav-section" onclick="showContent(6)">getNumber(element)</div>
+			<div class="nav-section" onclick="showContent(7)">setNumber(element, val)</div>
+			<div class="nav-section" onclick="showContent(8)">getChecked(element)</div>
+			<div class="nav-section" onclick="showContent(9)">setChecked(element, val)</div>
+			<div class="nav-section" onclick="showContent(10)">getImageURL(element)</div>
+			<div class="nav-section" onclick="showContent(11)">setImageURL(element, val)</div>
+			<div class="nav-section" onclick="showContent(13)">playAudio(src)</div>
+			<div class="nav-section" onclick="showContent(14)">stopAudio(audioSrc)</div>
+			<div class="nav-section" onclick="showContent(15)">showElement(element)</div>
+			<div class="nav-section" onclick="showContent(16)">hideElement(element)</div>
+			<div class="nav-section" onclick="showContent(17)">deleteElement(element)</div>
+			<div class="nav-section" onclick="showContent(18)">setPosition(element, x, y, width, height)</div>
+			<div class="nav-section" onclick="showContent(19)">setSize(element, width, height)</div>
+			<div class="nav-section" onclick="showContent(20)">write(text)</div>
+			<div class="nav-section" onclick="showContent(21)">getXPosition(element)</div>
+			<div class="nav-section" onclick="showContent(22)">getYPosition(element)</div>
+			<div class="nav-section" onclick="showContent(23)">setScreen(fileORurl)</div>
+			<div class="nav-section" onclick="showContent(24)">openWindow(URL)</div>
+			<div class="nav-section" onclick="showContent(25)">createButton(id, text)</div>
+			<div class="nav-section" onclick="showContent(26)">createTextInput(id)</div>
+			<div class="nav-section" onclick="showContent(27)">createTextLabel(id, text)</div>
+			<div class="nav-section" onclick="showContent(28)">createDropdown(id, options)</div>
+			<div class="nav-section" onclick="showContent(29)">createCheckbox(id)</div>
+			<div class="nav-section" onclick="showContent(30)">createRadioButton(id)</div>
+			<div class="nav-section" onclick="showContent(31)">createImage(id, src)</div>
+			<div class="nav-section" onclick="showContent(32)">createCanvas(id, width, height)</div>
+			<div class="nav-section" onclick="showContent(33)">setActiveCanvas(id)</div>
+			<div class="nav-section" onclick="showContent(34)">getActiveCanvas()</div>
+			<div class="nav-section" onclick="showContent(35)">line(x1, y1, x2, y2)</div>
+			<div class="nav-section" onclick="showContent(36)">setFillColor(color)</div>
+			<div class="nav-section" onclick="showContent(37)">circle(x, y, radius)</div>
+			<div class="nav-section" onclick="showContent(38)">rect(x, y, width, height)</div>
+			<div class="nav-section" onclick="showContent(39)">setStrokeWidth(width)</div>
+			<div class="nav-section" onclick="showContent(40)">setStrokeColor(color)</div>
+			<div class="nav-section" onclick="showContent(41)">drawImageURL(url)</div>
+			<div class="nav-section" onclick="showContent(42)">clearCanvas()</div>
+			<div class="nav-section" onclick="showContent(43)">getImageDataAt(x, y, width, height)</div>
+			<div class="nav-section" onclick="showContent(44)">putImageDataAt(imgData, x, y)</div>
+			<div class="nav-section" onclick="showContent(45)">getRed(imgData, x, y)</div>
+			<div class="nav-section" onclick="showContent(46)">getGreen(imgData, x, y)</div>
+			<div class="nav-section" onclick="showContent(47)">getBlue(imgData, x, y)</div>
+			<div class="nav-section" onclick="showContent(48)">setRed(imgData, x, y, value)</div>
+			<div class="nav-section" onclick="showContent(49)">setGreen(imgData, x, y, value)</div>
+			<div class="nav-section" onclick="showContent(50)">setBlue(imgData, x, y, value)</div>
+			<div class="nav-section" onclick="showContent(51)">setAlpha(imgData, x, y, value)</div>
+			<div class="nav-section" onclick="showContent(52)">setRGB(imgData, x, y, red, green, blue)</div>
+			<div class="nav-section" onclick="showContent(53)">promptNum()</div>
+			<div class="nav-section" onclick="showContent(54)">insertItem(list, index, item)</div>
+			<div class="nav-section" onclick="showContent(55)">appendItem(list, item)</div>
+			<div class="nav-section" onclick="showContent(56)">removeItem(list, index)</div>
+			<div class="nav-section" onclick="showContent(57)">getValue(object, key)</div>
+			<div class="nav-section" onclick="showContent(58)">addPair(object, key, value)</div>
+			<div class="nav-section" onclick="showContent(59)">randomNumber(min, max)</div>
+			<div class="nav-section" onclick="showContent(60)">startDrawing(customDrawFunction)</div>
+			<div class="nav-section" onclick="showContent(61)">stopDrawing()</div>
+			<div class="nav-section" onclick="showContent(62)">drawFrame()</div>
+		</div>
+		<div class="main-container">
+			<button class="open-button" onclick="openNav()">Open</button>
+			<h1>Documentation</h1>
+			<div class="break"></div>
+			<div class="content" id="content1">
+				<h3>onEvent(elem, event, func)</h3>
+				<p>On event takes 3 arguments. This function is a part of the App lab in code.org. The elem/element
+					argument takes string
+					as an input and represents the element being modified. The event arguments takes string as an input
+					and represents the event that the given element is watching for. The func argument represents the
+					function to be ran when the event is detected.</p>
+				<p>This function's purpose is to watch for events on given elements and run a function when the event is
+					detected.</p>
+			</div>
+			<div class="content" id="content2">
+				<h3>setProperty(elem, prop, val)</h3>
+				<p>Set property takes 3 arguments. This function is a part of the App lab in code.org. The elem/element
+					argument takes
+					string as an input and represents the element being modified. The prop/property argument takes
+					string as an input
+					and represents what property is being modified. PLEASE NOTE: if the property is not a base HTML
+					attribute,
+					(generally the case for CSS attributes/styling such as border) you must add 'style.' before the
+					property to be able
+					to modify/access it. The val/value property argument takes string/numbers as an input and represents
+					the value that
+					a property is being changed to. </p>
+				<p>The purpose of set property is to set a property of a given element.</p>
+			</div>
+			<div class="content" id="content3">
+				<h3>getProperty(element, property)</h3>
+				<p>Get property takes 2 arguments. This function is a part of the App lab in code.org. The elem/element
+					argument takes
+					string as an input and represents the element being modified. The prop/property argument takes
+					string as an input
+					and represents what property is being modified. PLEASE NOTE: if the property is not a base HTML
+					attribute,
+					(generally the case for CSS attributes/styling such as border) you must add 'style.' before the
+					property to be able
+					to modify/access it. </p>
+				<p>The purpose of get property is to get a given property of a given element.</p>
+			</div>
+			<div class="content" id="content4">
+				<h3>getText(element)</h3>
+				<p>Get text takes 1 arguments. This function is a part of the App lab in code.org. The elem/element
+					argument takes
+					string as an input and represents the element being modified. </p>
+				<p>The purpose of the get text function is to get the text content of a given element.</p>
+			</div>
+			<div class="content" id="content5">
+				<h3>setText(element, val)</h3>
+			</div>
+			<div class="content" id="content6">
+				<h3>getNumber(element)</h3>
+			</div>
+			<div class="content" id="content7">
+				<h3>setNumber(element, val)</h3>
+			</div>
+			<div class="content" id="content8">
+				<h3>getChecked(element)</h3>
+			</div>
+			<div class="content" id="content9">
+				<h3>setChecked(element, val)</h3>
+			</div>
+			<div class="content" id="content10">
+				<h3>getImageURL(element)</h3>
+			</div>
+			<div class="content" id="content11">
+				<h3>setImageURL(element, val)</h3>
+			</div>
+			<div class="content" id="content13">
+				<h3>playAudio(src)</h3>
+			</div>
+			<div class="content" id="content14">
+				<h3>stopAudio(audioSrc)</h3>
+			</div>
+			<div class="content" id="content15">
+				<h3>showElement(element)</h3>
+			</div>
+			<div class="content" id="content16">
+				<h3>hideElement(element)</h3>
+			</div>
+			<div class="content" id="content17">
+				<h3>deleteElement(element)</h3>
+			</div>
+			<div class="content" id="content18">
+				<h3>setPosition(element, x, y, width, height)</h3>
+			</div>
+			<div class="content" id="content19">
+				<h3>setSize(element, width, height)</h3>
+			</div>
+			<div class="content" id="content20">
+				<h3>write(text)</h3>
+			</div>
+			<div class="content" id="content21">
+				<h3>getXPosition(element)</h3>
+			</div>
+			<div class="content" id="content22">
+				<h3>getYPosition(element)</h3>
+			</div>
+			<div class="content" id="content23">
+				<h3>setScreen(fileORurl)</h3>
+			</div>
+			<div class="content" id="content24">
+				<h3>openWindow(URL)</h3>
+			</div>
+			<div class="content" id="content25">
+				<h3>createButton(id, text)</h3>
+			</div>
+			<div class="content" id="content26">
+				<h3>createTextInput(id)</h3>
+			</div>
+			<div class="content" id="content27">
+				<h3>createTextLabel(id, text)</h3>
+			</div>
+			<div class="content" id="content28">
+				<h3>createDropdown(id, options)</h3>
+			</div>
+			<div class="content" id="content29">
+				<h3>createCheckbox(id)</h3>
+			</div>
+			<div class="content" id="content30">
+				<h3>createRadioButton(id)</h3>
+			</div>
+			<div class="content" id="content31">
+				<h3>createImage(id, src</h3>
+			</div>
+			<div class="content" id="content32">
+				<h3>createCanvas(id, width, height)</h3>
+			</div>
+			<div class="content" id="content33">
+				<h3>setActiveCanvas(id</h3>)
+			</div>
+			<div class="content" id="content34">
+				<h3>getActiveCanvas()</h3>
+			</div>
+			<div class="content" id="content35">
+				<h3>line(x1, y1, x2, y2)</h3>
+			</div>
+			<div class="content" id="content36">
+				<h3>setFillColor(color)</h3>
+			</div>
+			<div class="content" id="content37">
+				<h3>circle(x, y, radius)</h3>
+			</div>
+			<div class="content" id="content38">
+				<h3>rect(x, y, width, height)</h3>
+			</div>
+			<div class="content" id="content39">
+				<h3>setStrokeWidth(width)</h3>
+			</div>
+			<div class="content" id="content40">
+				<h3>setStrokeColor(color)</h3>
+			</div>
+			<div class="content" id="content41">
+				<h3>drawImageURL(url)</h3>
+			</div>
+			<div class="content" id="content42">
+				<h3>clearCanvas()</h3>
+			</div>
+			<div class="content" id="content43">
+				<h3>getImageDataAt(x, y, width, height)</h3>
+			</div>
+			<div class="content" id="content44">
+				<h3>putImageDataAt(imgData, x, y)</h3>
+			</div>
+			<div class="content" id="content45">
+				<h3>getRed(imgData, x, y)</h3>
+			</div>
+			<div class="content" id="content46">
+				<h3>getGreen(imgData, x, y)</h3>
+			</div>
+			<div class="content" id="content47">
+				<h3>getBlue(imgData, x, y)</h3>
+			</div>
+			<div class="content" id="content48">
+				<h3>setRed(imgData, x, y, value)</h3>
+			</div>
+			<div class="content" id="content49">
+				<h3>setGreen(imgData, x, y, value)</h3>
+			</div>
+			<div class="content" id="content50">
+				<h3>setBlue(imgData, x, y, value)</h3>
+			</div>
+			<div class="content" id="content51">
+				<h3>setAlpha(imgData, x, y, value)</h3>
+			</div>
+			<div class="content" id="content52">
+				<h3>setRGB(imgData, x, y, red, green, blue)</h3>
+			</div>
+			<div class="content" id="content53">
+				<h3>promptNum()</h3>
+			</div>
+			<div class="content" id="content54">
+				<h3>insertItem(list, index, item)</h3>
+			</div>
+			<div class="content" id="content55">
+				<h3>appendItem(list, item)</h3>
+			</div>
+			<div class="content" id="content56">
+				<h3>removeItem(list, index)</h3>
+			</div>
+			<div class="content" id="content57">
+				<h3>getValue(object, key)</h3>
+			</div>
+			<div class="content" id="content58">
+				<h3>addPair(object, key, value)</h3>
+			</div>
+			<div class="content" id="content59">
+				<h3>randomNumber(min, max)</h3>
+			</div>
+			<div class="content" id="content60">
+				<h3>startDrawing(customDrawFunction)</h3>
+			</div>
+			<div class="content" id="content61">
+				<h3>stopDrawing()</h3>
+			</div>
+			<div class="content" id="content62">
+				<h3>drawFrame()</h3>
+			</div>
+		</div>
+		<script src="doc-index.js"></script>
+</body>
+
+</html>
