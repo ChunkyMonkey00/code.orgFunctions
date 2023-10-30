@@ -11,12 +11,13 @@
 	<div class="top-nav">
 		<div class="nav-item logo">
 			<img src="logo.png" width="50px" height="50px" style="border: 1px solid white;border-top:none;border-bottom:none;background-color:white;" /></div>
-			<div class="nav-item"><a href="index.html">Home</a></div>
-			<div class="nav-item"><a href="dpc-index.html">Documents</a></div>
+			<div class="nav-item">Home</div>
+			<div class="nav-item">Documents</div>
 			<div class="nav-item">Contact</div>
 		</div>
 		<div class="side-nav" id="mySidenav">
 			<button id="closeBtn" onclick="closeNav()">Close</button>
+			<div class="nav-section" onclick="showContent(0)">Overview</div>
 			<div class="nav-section" onclick="showContent(1)">onEvent(elem, event, func)</div>
 			<div class="nav-section" onclick="showContent(2)">setProperty(elem, prop, val)</div>
 			<div class="nav-section" onclick="showContent(3)">getProperty(element, property)</div>
@@ -83,6 +84,97 @@
 			<button class="open-button" onclick="openNav()">Open</button>
 			<h1>Documentation</h1>
 			<div class="break"></div>
+			<div class="content" id="content0">
+				<h3>Overview</h3>
+				<button style="left:50%;position:relative;transform:translate(-50%);font-size:15px;" onmouseover="this.style.backgroundColor = 'rgb(60, 60, 60)'" onmouseout="this.style.backgroundColor = 'rgb(30, 30, 30)'" onclick="togglereadme()">Toggle README.MD</button>
+				<p id='readme' style="text-align:left;text-indent:0;display:none;"># Example
+					Website <a href="https://chunkymonkey00.github.io/code.orgFunctions/page/">here</a>
+					<br>
+				(code.org and my library equivalents)
+					<br>
+				My library: https://jsitor.com/dQGfi9Di5i
+					<br>
+				Code.org: https://studio.code.org/projects/applab/f8alqLNUPSaEVV3UCUSgUAeJ23oAFlIolkyo_H70e58
+					<br>
+					<br>
+					<br>
+				# Notice
+					<br>
+				Not all function names/uses are exactly the same, please look at examples.js to see what changed
+					<br><br><br>
+				# code.org Functions in pure Javascript
+					<br>
+				code.org functions in pure js, this is a library for teachers/students who want to transition from code.org to pure
+				javascript.
+					<br><br><br>
+				#Usage
+					<br>
+				to use in your program, put the following line in the `&lt;head&gt;` element of your HTML
+					<br><br>
+				`&lt;script
+				src=&quot;https://cdn.jsdelivr.net/gh/ChunkyMonkey00/code.orgFunctions@main/functionLibrary.js&quot;&gt;&lt;/script&gt;`
+					<br><br>
+				and make sure you put in
+					<br>
+				document.addEventListener(&quot;DOMContentLoaded&quot;, function() {<br>
+					`&lt; Your code here &gt;`<br>
+				});<br><br>
+
+				to ensure that the javascript library can load before you call any of its functions.<br><br>
+
+				calling functions from this lib requires a prefix (labs) EX:<br>
+				`labs.createCanvas(&quot;canv1&quot;, 100, 100)`<br><br><br>
+
+				EX:
+					<br><br>
+				&lt;!DOCTYPE HTML&gt;<br>
+				&lt;html&gt;<br>
+				&lt;head&gt;<br>
+				&lt;script<br>
+				src=&quot;https://cdn.jsdelivr.net/gh/ChunkyMonkey00/code.orgFunctions@main/functionLibrary.js&quot;&gt;&lt;/script&gt;<br>
+				&lt;/head&gt;<br>
+				&lt;body&gt;<br>
+				&lt;button id=&quot;btn1&quot;&gt;Click Me!&lt;/button&gt;<br>
+				&lt;/body&gt;<br>
+				&lt;/html&gt;<br>
+					<br>
+					<br>
+				document.addEventListener(&quot;DOMContentLoaded&quot;, function() {<br>
+				labs.onEvent(&quot;btn1&quot;, &quot;click&quot;, function() {<br>
+				labs.setScreen(&quot;new.html&quot;);<br>
+				});<br>
+				});<br><br>
+
+				visit examples.html for an example of how to set up usage of these functions (in HTML)<br>
+				visit examples.js for an example of how to use each function. (in javascript)</p>
+					<br>
+					<div id="rmb" class="break" style="display:none;"></div>
+					<br>
+					<ul>
+						<li>The elem/element argument takes string as an input and represents the element being
+							modified. </li>
+						<li>The prop/property argument takes string as an input and represents what property is being
+							modified. PLEASE NOTE:
+							if the property is not a base HTML attribute, (generally the case for CSS attributes/styling
+							such as border) you
+							must add 'style.' before the property to be able to modify/access it. </li>
+						<li>The val/value property argument takes string/numbers as an input and represents the value
+							that a property is
+							being changed to. </li>
+						<li>The id argument takes string as an input and represents the HTML id that the
+							created/modified element will have.
+						</li>
+						<li>The text arguments takes string (including numbers within string) as an input and represents
+							the text you want
+							to input into the function. This is generally used for functions labs.write or labs.setText.
+							It it essentially
+							the same as the value argument but rather it takes string.</li>
+					</ul>
+					<br>
+					<br>
+					<p>Most functions are self-explanitory by the name. Code.org also has documentation on every
+						function, feel free to view it.</p>
+			</div>
 			<div class="content" id="content1">
 				<h3>onEvent(elem, event, func)</h3>
 				<p>On event takes 3 arguments. This function is a part of the App lab in code.org. The elem/element
