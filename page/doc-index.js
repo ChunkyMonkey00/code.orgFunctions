@@ -1,9 +1,23 @@
-for (let i = 1; i <= 62; i++) {
+var showReadMe = false;
+
+function togglereadme() {
+  if (showReadMe) {
+    document.getElementById("readme").style.display = "none";
+    document.getElementById("rmb").style.display = "none";
+    showReadMe = false;
+  } else {
+    document.getElementById("readme").style.display = "block";
+    document.getElementById("rmb").style.display = "block";
+    showReadMe = true;
+  }
+}
+
+for (let i = 0; i <= 62; i++) {
   const contentDiv = document.getElementById(`content${i}`);
-  if(contentDiv==null) {
+  if (contentDiv == null) {
     continue;
   }
-  if (i === 1) {
+  if (i === 0) {
     contentDiv.style.display = "block";
     contentDiv.classList.add("active");
   } else {
@@ -31,7 +45,7 @@ function closeNav() {
 }
 // Rest of the JavaScript for content switching (same as before)
 function showContent(sectionNumber) {
-  for (let i = 1; i <= 62; i++) {
+  for (let i = 0; i <= 62; i++) {
     const contentDiv = document.getElementById(`content${i}`);
     if (contentDiv == null) {
       continue;
