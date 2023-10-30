@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+}
+
+body {
+  background-color: lightGray;
+  font-family: 'Open-Dyslexic', sans-serif;
+}
+
+/* CSS for the top navigation bar */
+.top-nav {
+  width: 100%;
+  height: 50px;
+  background-color: black;
+  display: flex;
+  border-bottom: 1px solid black;
+}
+
+/* CSS for the individual navigation items */
+.nav-item {
+  flex: 1;
+  text-align: center;
+  color: white;
+  line-height: 50px;
+  transition: background-color 0.3s, color 0.3s;
+  /* Smooth transition for background color change */
+}
+
+.nav-item:hover {
+  background-color: lightgray;
+  /* Change background color on hover */
+  color: gray;
+}
+
+/* CSS for the logo */
+.nav-item.logo {
+  width: 20px;
+  height: 20px;
+  background: url('your-logo-image.png') no-repeat center center;
+  background-size: cover;
+  margin: 0 10px;
+  /* Add spacing between the logo and other items */
+}
+
+
+h1,
+h2,
+h3 {
+  text-align: center;
+}
+
+h1 {
+  margin-top: 10px;
+}
+
+h3 {
+  color: gray;
+  font-size: 15px;
+  margin-bottom: 30px;
+}
+
+.break {
+  width: 97%;
+  left: 50%;
+  transform: translate(-50%);
+  position: relative;
+  background-color: black;
+  height: 2px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+p {
+    text-indent: 30pt;
+    padding:10px;
+    margin: auto;
+  }
+
+  /* CSS for the main container */
+        .image-slider-container {
+            width: 85%;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+        }
+
+        /* CSS for the image slider */
+        .image-slider {
+            display: flex;
+            overflow: hidden;
+        }
+
+        .image-slider img {
+            width: 100%;
+            display: none;
+        }
+
+        .image-slider img.active {
+            display: block;
+        }
+
+        /* CSS for the navigation bubbles */
+        .bubbles {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .bubble {
+            width: 12px;
+            height: 12px;
+            background-color: gray;
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        .bubble.active {
+            background-color: lightgray;
+        }
