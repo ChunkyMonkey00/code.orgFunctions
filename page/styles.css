@@ -114,6 +114,7 @@ p {
             margin: 0 5px;
             cursor: pointer;
             border:none;
+            transition: border 0.3s, border-radius 0.3s;
         }
 
         .bubble.active {
