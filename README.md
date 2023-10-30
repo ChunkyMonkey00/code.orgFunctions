@@ -1,3 +1,8 @@
+# Example 
+(code.org and my library equivalents)  
+My library: https://jsitor.com/dQGfi9Di5i  
+Code.org: https://studio.code.org/projects/applab/f8alqLNUPSaEVV3UCUSgUAeJ23oAFlIolkyo_H70e58  
+  
 # Notice
 Not all function names/uses are exactly the same, please look at examples.js to see what changed  
   
