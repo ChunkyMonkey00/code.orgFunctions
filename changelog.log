@@ -11,3 +11,4 @@ v1.0.5 - change more file names, functions are now initialized as appLab.(functi
 v1.1.0 - technically game lab support is in, just not enough of it for this to be v2. Also everything is now just "labs.function" instead of having seperate appLab and gameLab functions.
 v1.1.1 - bug fixes
 v1.1.2 - renaming fixes
+v1.1.3 - examples created
