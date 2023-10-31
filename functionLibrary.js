@@ -163,12 +163,12 @@ var labs = (function () {
 
   function getXPosition(element) {
     let x = getProperty(element, "style.left");
-    return x.slice(0, -2);
+    return Number(x.slice(0, -2));
   }
 
   function getYPosition(element) {
     let y = getProperty(element, "style.top");
-    return y.slice(0, -2);
+    return Number(y.slice(0, -2));
   }
 
   //Be careful with this one. I havent tested it yet, it should just change the html file or tab
